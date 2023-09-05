@@ -1,25 +1,117 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.33919.361
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{1292FB7D-43A3-4FC3-B97C-FB07AE4724FB}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1292FB7D-43A3-4FC3-B97C-FB07AE4724FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1292FB7D-43A3-4FC3-B97C-FB07AE4724FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1292FB7D-43A3-4FC3-B97C-FB07AE4724FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1292FB7D-43A3-4FC3-B97C-FB07AE4724FB}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {01097718-F1F7-4779-A191-A23AB468C179}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HomeWork
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {       /* 1 задание */
+            Console.WriteLine("1 задание - вывести три слова в ряд , а потом по столбцам \n");
+            Console.ReadKey();
+            Console.WriteLine("Мир Труд Май");/*выводит строку*/
+            Console.ReadKey();
+            Console.WriteLine("Мир \n  Труд \n      Май \n"); /* по нажатию кнопки выводит 3 строки*/
+            Console.ReadKey();
+            {
+
+            }
+            /* 2 задание  */
+            Console.WriteLine("2 задание - программа просит пользователя ввести 2 числовые и поменять местами \n");
+            Console.WriteLine("Введите два числа по очереди");
+            int per1 = Convert.ToInt32(Console.ReadLine());
+            int per2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Итог программы {per2}{per1}");
+            Console.ReadLine();
+            {
+
+            }
+
+            /* Задание 3 */
+            Console.WriteLine("3 задание - найти по радиусу, Длину и Площадь \nВведите радиус окружности");
+            int Radius = Convert.ToInt32(Console.ReadLine());
+            double Long = 2 * Math.PI * Radius;
+            double Square = Math.PI * Radius * Radius;
+            Console.WriteLine($"Длина окружности равна - {Long} \n Площадь круга равна - {Square}");
+            Console.ReadKey();
+
+            /* 4 Задание */
+            Console.WriteLine("4 задание - найти у = соs(x) \nВведите x, чтобы найти у");
+            float x = Convert.ToInt32(Console.ReadLine());
+            double y = Math.Cos(x);
+            Console.WriteLine($"y равен {y}");
+            Console.ReadKey();
+
+
+            /* 5 задание */
+            Console.WriteLine("Задание 5 - найти корни квадратного уравнения \nВведите переменные квадратного уравнения");
+
+            double a = Convert.ToDouble(Console.ReadLine());
+            double b = Convert.ToDouble(Console.ReadLine());
+            double c = Convert.ToDouble(Console.ReadLine());
+            double d = b * b - 4 * a * c;
+
+            if (d < 0)
+            {
+                Console.WriteLine("Дискриминант меньше нуля. Корней нет.");
+            }
+            if (d == 0)
+            {
+                double x0 = (-b / (2 * a));
+                Console.WriteLine("Дискриминант равен нулю. Корень равен " + x + ".");
+            }
+            if (d > 0)
+            {
+                double x1 = ((-b - Math.Sqrt(d)) / (2 * a));
+                double x2 = ((-b + Math.Sqrt(d)) / (2 * a));
+                Console.WriteLine($"Дискриминант равен " + d + ". Первый корень равен " + x1 + ". Второй корень равен " + x2 + ".");
+            }
+            /* 6 задание */
+            Console.ReadKey();
+            Console.WriteLine("Задание 6 - поменять переменные \nВведите переменные");
+            int a6 = Convert.ToInt32(Console.ReadLine());
+            int b6 = Convert.ToInt32(Console.ReadLine());
+            int c6 = Convert.ToInt32(Console.ReadLine());
+            int aB6 = c6, aC6 = a6, aA6 = b6;
+            int bB6 = a6, bC6 = b6, bA6 = c6;
+            Console.WriteLine($"a - {aA6}{aB6}{aC6}");
+            Console.ReadKey();
+            Console.WriteLine($"a - {bA6}{bB6}{bC6}");
+            Console.ReadKey();
+
+            /* 7 задание */
+            Console.WriteLine("Задание 7 - программа которая выводит 4 строки случайных чисел \n");
+            Random rnd = new Random();
+            int p1 = rnd.Next(-9999, 9999);
+            int p2 = rnd.Next(-9999, 9999);
+            int p3 = rnd.Next(-9999, 9999);
+            int p4 = rnd.Next(-9999, 9999);
+            Console.WriteLine($"Ваши числа; \n1:{p1}\n2:{p2}\n3:{p3}\n4:{p4}");
+            Console.ReadKey();
+
+            /* 8 задание*/
+            Console.WriteLine("Задание 8 - дано 3х число, переставить конец в начало \n Введите 3х число:");
+            int chislo3 = Convert.ToInt32(Console.ReadLine());
+            int otvet2 = chislo3 / 10;
+            int otvet1 = chislo3 - otvet2 * 10;
+            Console.WriteLine($"Ваше число:{otvet1}{otvet2}");
+            Console.ReadKey();
+            /*9 задание*/
+            Console.WriteLine("Задание 9 -известна стоимость 1 кг конфет, 1 кг печенья и 1 кг яблок./nНайти стоимость всей покупки если купили х у и z кг соответственно");
+            Console.WriteLine("Введите стоимость конфет");
+            int candy = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите кол-во кг конфет");
+            int candy_weight = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите стоимость яблок");
+            int apple = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите кол-во кг яблок");
+            int apple_weight = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите стоимость печенья");
+            int cookie = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите кол-во кг печенья");
+            int cookie_weight = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Общая стоимость равна - {candy*candy_weight+apple*apple_weight+cookie*cookie_weight}");
+            Console.ReadKey();
